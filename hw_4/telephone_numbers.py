@@ -6,7 +6,7 @@
 
 def as_numeric(text):
     """
-    testdoc
+    Enter a string to convert it into it's numeric value on the telephone pad
     """
     out_list = []
     i=0
@@ -17,8 +17,7 @@ def as_numeric(text):
     val_list = list(conv.values())
     key_list = list(conv.keys())
     position = key_list.index("R")
-    print(val_list[position])
-    print(key_list[position])
+
 
     for i in range(len(text)):
         if text[i] in key_list:
@@ -27,19 +26,10 @@ def as_numeric(text):
         else:
             out_list+=text[i]
     print(out_list)
+
     for ele in range(len(out_list)):
-        if type(out_list[ele]) == str:
-            output+=out_list[ele]
-        else:
-            continue
-    print(output)
+        output+=str(out_list[ele])
+    return output
 
-print(as_numeric('0800 reimann'))
-
-"""
-    for i in range(len(text)):
-        for key, value in conv.items():
-            if text[i] == value:
-                out.append()
-    print(out)
-"""
+if __name__ == "__main__":
+    as_numeric('0664 schuh')
