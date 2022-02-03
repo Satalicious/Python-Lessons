@@ -7,11 +7,11 @@
 
 
 def encode(inp):
-    x = inp.upper()
+    text = inp.upper()
     result = ""
     f_half = "ABCDEFGHIJKLM"
     s_half = "NOPQRSTUVWXYZ"
-    for char in x:
+    for char in text:
         if char in f_half:
             result += chr(ord(char)+13)
         if char in s_half:
@@ -31,11 +31,11 @@ print(encode('''Arire gehfg n cebtenz lbh qba'g unir fbheprf sbe.'''))
 
 
 def decode(inp):
-    x = inp.upper()
+    text = inp.upper()
     result = ""
     f_half = 'ABCDEFGHIJKLM'
     s_half = 'NOPQRSTUVWXYZ'
-    for char in x:
+    for char in text:
         if char in f_half:
             result += chr(ord(char)+13)
         if char in s_half:
