@@ -6,7 +6,7 @@
 
 def as_numeric(text):
     """
-    Enter a string to convert it into it's numeric value on the telephone pad
+    Enter string to convert into numeric values for telephone keypad
     """
     out_list = []
     i=0
@@ -14,22 +14,18 @@ def as_numeric(text):
     output=""
     conv = {"A":2, "B":2, "C":2,"D":3, "E":3,"F":3,"G":4,"H":4,"I":4,"J":5,"K":5,"L":5,"M":6,"N":6,
     "O":6,"P":7,"Q":7,"R":7,"S":7,"T":8, "U":8, "V":8,"W":9, "X":9, "Y":9,"Z":9}
-    val_list = list(conv.values())
     key_list = list(conv.keys())
-    position = key_list.index("R")
-
-
+    
     for i in range(len(text)):
         if text[i] in key_list:
             position = conv[text[i]]
-            out_list.append(val_list[position])
+            out_list.append(position)
         else:
             out_list+=text[i]
-    print(out_list)
 
     for ele in range(len(out_list)):
         output+=str(out_list[ele])
     return output
 
 if __name__ == "__main__":
-    as_numeric('0664 schuh')
+    print(as_numeric('0664 reimann'))
