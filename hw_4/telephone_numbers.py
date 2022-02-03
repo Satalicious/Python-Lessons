@@ -5,6 +5,9 @@
 """
 
 def as_numeric(text):
+    """
+    testdoc
+    """
     out_list = []
     i=0
     text = list(text.upper())
