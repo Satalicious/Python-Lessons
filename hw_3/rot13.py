@@ -24,10 +24,10 @@ def encode(inp):
             result += '.'
         elif char == "'":
             result += "'"
-    return result
+    return print(result)
     
 
-print(encode('''Arire gehfg n cebtenz lbh qba'g unir fbheprf sbe.'''))
+#print(encode('''Arire gehfg n cebtenz lbh qba'g unir fbheprf sbe.'''))
 
 
 def decode(inp):
@@ -48,7 +48,7 @@ def decode(inp):
             result += '.'
         elif char == "'":
             result += "'"
-    return result
+    return print(result)
 
 
-print(decode("NEVER TRUST A PROGRAM YOU DONT HAVE SOURCES FOR."))
+#print(decode("NEVER TRUST A PROGRAM YOU DONT HAVE SOURCES FOR."))
