@@ -5,6 +5,7 @@ Simple fake news generator with commandline interface.
 """
 
 import argparse
+from distutils.command.clean import clean
 import re
 import sys
 
@@ -32,7 +33,7 @@ WORD_LIST = sorted(set(TWEET1) | set(TWEET2) | set(TWEET3))
 
 def clean_words(word_list):
     """Return given word_list with only alphanumeric chars or the '_'."""
-    pattern = re.compile('[\W_]+')
+    pattern = re.compile('[\W_-]+')
     word_list = set(word_list)
     return sorted([pattern.sub('', word).lower() for word in word_list])
 
@@ -56,7 +57,7 @@ def main():
     args = parser.parse_args()
     if args.article:
         word_list = wp.page(args.article).content.split()
-        clean_words(word_list)
+        clean_words()
     else:
         word_list = WORD_LIST
     seed = args.seed or None
