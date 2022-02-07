@@ -42,7 +42,7 @@ def fake_news(word_list, seed=None):
     fake = Faker('en_US')
     if seed:
         Faker.seed(seed)
-    person = fake.name()
+    person = fake.name_female()
     text = fake.text(max_nb_chars=MAX_CHARS - len(person) - 1,
                      ext_word_list=word_list)
     return 'According to {} {}'.format(person, text[0].lower() + text[1:])
@@ -56,7 +56,7 @@ def main():
     args = parser.parse_args()
     if args.article:
         word_list = wp.page(args.article).content.split()
-        clean_words()
+        clean_words(word_list)
     else:
         word_list = WORD_LIST
     seed = args.seed or None
