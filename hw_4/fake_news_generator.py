@@ -56,6 +56,7 @@ def main():
     args = parser.parse_args()
     if args.article:
         word_list = wp.page(args.article).content.split()
+        clean_words()
     else:
         word_list = WORD_LIST
     seed = args.seed or None
