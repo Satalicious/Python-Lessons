@@ -57,13 +57,10 @@ def main():
     args = parser.parse_args()
     if args.article:
         word_list = wp.page(args.article).content.split()
-        y=True
+        word_list = clean_words(word_list)
     else:
         word_list = WORD_LIST
-        y=False
     seed = args.seed or None
-    if y == True:
-        clean_words()
     print(fake_news(word_list, seed))
 
 
