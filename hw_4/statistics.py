@@ -40,11 +40,26 @@ def count(filename):
         num_items += 1
     return num_items
 
+def calc_max(filename,key):
+    """Return the maximum value of given key."""
+    mylist = []
+    for item in items(filename):
+        mylist.append(item[key])
+    return max(mylist)
+
+def calc_min(filename,key):
+    """Return the minimum value of given key."""
+    mylist = []
+    for item in items(filename):
+        mylist.append(item[key])
+    return min(mylist)
 
 def calc_mean(filename, key):
-    """
-    """
-    raise NotImplementedError
+    """Return the media of given key"""
+    summe = int()
+    for item in items(filename):
+        summe +=item[key]
+    return summe/count(filename)
 
 
 def calc_stddev(filename, key):
@@ -54,20 +69,25 @@ def calc_stddev(filename, key):
 
 
 def calc_sum(filename, key):
-    """
-    """
-    raise NotImplementedError
-
+    """Return the sum of given key."""
+    summe = int()
+    for item in items(filename):
+        summe +=item[key]
+    return summe
 
 def calc_variance(filename, key):
     """
     """
     raise NotImplementedError
 
+#NOT WORKING RN
 def calc_median(filename, key):
-    """
-    """
-    return NotImplementedError
+    """Return median of given key"""
+    mylist = []
+    for item in items(filename):
+        mylist.append(item[key])
+    mylist = sorted(mylist)
+    return mylist[count(filename)//2]
 
 
 def main():
@@ -81,11 +101,14 @@ def main():
     args = parser.parse_args()
 
     print("count:\n", count(args.filename))
-    print("sum:", calc_sum(args.filename, args.key))
+    print("max:", calc_max(args.filename, args.key))
+    print("min:", calc_min(args.filename, args.key))
     print("mean:", calc_mean(args.filename, args.key))
-    print("variance:", calc_variance(args.filename, args.key))
     print("standard deviation:", calc_stddev(args.filename, args.key))
+    print("sum:", calc_sum(args.filename, args.key))
+    print("variance:", calc_variance(args.filename, args.key))
     print("median:", calc_median(args.filename, args.key))
+    
 
 if __name__ == "__main__":
     sys.exit(main())
