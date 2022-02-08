@@ -25,7 +25,8 @@ def as_numeric(text):
 
     for ele in range(len(out_list)):
         output+=str(out_list[ele])
+    print(output)
     return output
 
 if __name__ == "__main__":
-    print(as_numeric('0664 reimann'))
+    print(as_numeric('0664 abcdefghijklmnopqrstuvwxyz'))
