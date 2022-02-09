@@ -55,7 +55,7 @@ def calc_min(filename,key):
     return min(mylist)
 
 def calc_mean(filename, key):
-    """Return the media of given key"""
+    """Return mean of given key"""
     summe = int()
     for item in items(filename):
         summe +=item[key]
@@ -63,9 +63,12 @@ def calc_mean(filename, key):
 
 
 def calc_stddev(filename, key):
-    """
-    """
-    raise NotImplementedError
+    """Return standard deviation of given key"""
+    from math import sqrt
+    summe = int()
+    for item in items(filename):
+        summe +=item[key]
+    return sqrt(summe + calc_mean(filename, key)**2 / count(filename))
 
 
 def calc_sum(filename, key):
@@ -76,11 +79,13 @@ def calc_sum(filename, key):
     return summe
 
 def calc_variance(filename, key):
-    """
-    """
-    raise NotImplementedError
+    """Return variance of given key"""
+    summe = int()
+    for item in items(filename):
+        summe +=item[key]
+    return summe + calc_mean(filename, key)**2 // count(filename)
 
-#NOT WORKING RN
+
 def calc_median(filename, key):
     """Return median of given key"""
     mylist = []
