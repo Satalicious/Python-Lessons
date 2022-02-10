@@ -40,14 +40,14 @@ def count(filename):
         num_items += 1
     return num_items
 
-def calc_max(filename,key):
+def find_max(filename,key):
     """Return the maximum value of given key."""
     mylist = []
     for item in items(filename):
         mylist.append(item[key])
     return max(mylist)
 
-def calc_min(filename,key):
+def find_min(filename,key):
     """Return the minimum value of given key."""
     mylist = []
     for item in items(filename):
@@ -65,10 +65,7 @@ def calc_mean(filename, key):
 def calc_stddev(filename, key):
     """Return standard deviation of given key"""
     from math import sqrt
-    summe = int()
-    for item in items(filename):
-        summe +=item[key]
-    return sqrt(summe + calc_mean(filename, key)**2 / count(filename))
+    return sqrt(calc_variance(filename, key))
 
 
 def calc_sum(filename, key):
@@ -80,10 +77,10 @@ def calc_sum(filename, key):
 
 def calc_variance(filename, key):
     """Return variance of given key"""
-    summe = int()
+    erg1=0
     for item in items(filename):
-        summe +=item[key]
-    return summe + calc_mean(filename, key)**2 // count(filename)
+        erg1+=(item[key] - calc_mean(filename, key))**2
+    return erg1 / count(filename)
 
 
 def calc_median(filename, key):
