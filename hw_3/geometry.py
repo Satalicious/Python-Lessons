@@ -12,7 +12,7 @@ def perimeter_right_triangle(c1, c2):
 
     `c1`, `c2`: catheti of the right triangle
     """
-    c3 = c1 + c2
+    c3 = c1 * c2
     return c3
 
 def area_right_triangle (c1,c2):
@@ -66,15 +66,17 @@ def surface_cylinder (r, h):
 
 def volume_cylinder (r, h):
     import math
-    V = math.pi * r * r * h
+    V = math.pi *r**2 * h
     return V
 
 def surface_cone (r, h):
     import math
-    S = math.pi * r * h
+    l = math.sqrt(r**2 * h**2)
+    S = math.pi * r * l + math.pi * r**2
     return S
 
 def volume_cone (r,h):
     import math
     V = 1/3 * math.pi * r * r * h
     return V
+print(surface_cone(0,0))

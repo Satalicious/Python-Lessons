@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 
 """
+.. moduleauthor:: Mathias Schuh <mathias.schuh@hotmail.com>
+"""
+
+"""
 This module contains functions to compute the statistical values
 of a given column in a given csv file.
 """

@@ -9,5 +9,5 @@ def quadratic(a, b, c):
     import cmath
     root = b ** 2 - 4 * a * c
     x1 = (-b + cmath.sqrt(root)) / (2 * a)
-    x2 = (-b - cmath.sqrt(root) / (2 * a))
-    return complex(x1), complex(x2)
+    x2 = (-b - cmath.sqrt(root)) / (2 * a)
+    return x1, x2

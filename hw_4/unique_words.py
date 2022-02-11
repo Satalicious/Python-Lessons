@@ -9,6 +9,11 @@
 # WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # General Public License for more details.
+#!/usr/bin/env python3
+
+"""
+.. moduleauthor:: Mathias Schuh <mathias.schuh@hotmail.com>
+"""
 
 """
 This program counts how many times each word in a given text file occurs.

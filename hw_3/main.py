@@ -6,20 +6,15 @@
 #!/usr/bin/env python3
 
 """Main module of this homework."""
-import equations
+
 import addition
-import conversion
-import geometry
-import business
-import rot13
-from rot13 import *
+
 
 
 def main():
-    encode('das ist das haus')
-
-    print("addition.sum_to(10) expected: 55",
+    print("addition.sum_to(10) expected: 55, actual: ",
     addition.sum_to(10))
+    return 0
     
 
 if __name__ == '__main__':

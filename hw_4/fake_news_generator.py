@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
+
+"""
+.. moduleauthor:: Mathias Schuh <mathias.schuh@hotmail.com>
+"""
 
 """
 Simple fake news generator with commandline interface.
