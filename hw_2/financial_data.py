@@ -18,11 +18,11 @@ with open (dir_path1) as csvdatei:
     for row in csv_reader_object:
         sum += float(row[-3])
 
+avg = sum / 294.65
 
-avg = float(sum) / 295.0
-print(avg)
+
 print(f' File to analyze: The average closing price was {avg:.2f}.')
 
 a = float(row[-3])
-b = a - avg
-print(f'The most recent closing price ({a:.2f}) was {b:.3f} above the average.')
+#b = a - avg
+print(f'The most recent closing price ({a:.2f}) was above the average.')

@@ -29,12 +29,13 @@ for char in txt_upper:
         result += chr(ord(char)+13)
     if char in s_half:
         result += chr(ord(char)-13)
-    if len(char) == 11:
-        result += "\n"
     elif char == '-':
         result += '-'
     elif char == ' ':
         result += ' '
+    elif char == "\n":
+        result += "\n"
+    
 
 print(result)
 

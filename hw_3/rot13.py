@@ -7,55 +7,47 @@
 
 
 def encode(inp):
-    if inp == (''):
-        return ('')
-    else:
-        text = inp.upper()
-        result = ''
-        f_half = "ABCDEFGHIJKLM"
-        s_half = "NOPQRSTUVWXYZ"
-        for char in text:
-            if char in f_half:
-                result += chr(ord(char)+13)
-            if char in s_half:
-                result += chr(ord(char)-13)
-            elif char == '-':
-                result += '-'
-            elif char == ' ':
-                result += ' '
-            elif char == '.':
-                result += '.'
-            elif char == "'":
-                result += "'"
-            return print(result)
+    text = inp.upper()
+    result = ""
+    f_half = 'ABCDEFGHIJKLM'
+    s_half = 'NOPQRSTUVWXYZ'
+    for char in text:
+        if char in f_half:
+            result += chr(ord(char)+13)
+        if char in s_half:
+            result += chr(ord(char)-13)
+        elif char == '-':
+            result += '-'
+        elif char == ' ':
+            result += ' '
+        elif char == '.':
+            result += '.'
+        elif char == "'":
+            result += "'"
+    return print(result)
     
-
-#encode('ARIRE GEHFG N CEBTENZ LBH QBAG UNIR FBHEPRF SBE.')
-#encode(''),''
-
+encode('')
 def decode(inp):
-    if inp == (''):
-        return ('')
-    else:
-        text = inp.upper()
-        result = ""
-        f_half = 'ABCDEFGHIJKLM'
-        s_half = 'NOPQRSTUVWXYZ'
-        for char in text:
-            if char in f_half:
-                result += chr(ord(char)+13)
-            if char in s_half:
-                result += chr(ord(char)-13)
-            elif char == '-':
-                result += '-'
-            elif char == ' ':
-                result += ' '
-            elif char == '.':
-                result += '.'
-            elif char == "'":
-                result += "'"
-            return print(result)
+    text = inp.upper()
+    result = ""
+    f_half = 'ABCDEFGHIJKLM'
+    s_half = 'NOPQRSTUVWXYZ'
+    for char in text:
+        if char in f_half:
+            result += chr(ord(char)+13)
+        if char in s_half:
+            result += chr(ord(char)-13)
+        elif char == '-':
+            result += '-'
+        elif char == ' ':
+            result += ' '
+        elif char == '.':
+            result += '.'
+        elif char == "'":
+            result += "'"
+
+    return print(result)
 
 
-#decode(''),''
+decode('')
 #decode('ARIRE GEHFG N CEBTENZ LBH QBAG UNIR FBHEPRF SBE.')

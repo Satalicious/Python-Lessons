@@ -19,7 +19,7 @@ import urllib.request
 #um url zu importieren
 
 
-with urllib.request.urlopen('http://bulme.find-santa.eu/pos/data/fc.txt') as f:
+with urllib.request.urlopen('https://bulme.find-santa.eu/data/python/fc.txt') as f:
     html = f.read().decode('utf-8')
 
 

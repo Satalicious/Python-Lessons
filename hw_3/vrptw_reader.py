@@ -42,12 +42,13 @@ def calc_distance(x,no,no2):
     sheet2 = c2_data.split()
     sheet = float(sheet[3])
     sheet2 = float(sheet2[3])
+    print(sheet,sheet2)
     dist = np.linalg.norm(sheet-sheet2)
     return dist
 
 
 #print(get_demand(read_string_list(),2))
-#print(calc_distance(read_string_list(),2,3))
+#print(calc_distance(read_string_list(),1,3))
 
     
 
