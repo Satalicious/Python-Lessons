@@ -4,5 +4,5 @@
 
 ---
 
-**find the exercises here** => https://bulme.find-santa.eu/pos/1/
+**find the exercises here** => https://bulme.find-santa.eu
 
